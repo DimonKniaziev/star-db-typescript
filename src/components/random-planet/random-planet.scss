@@ -1,0 +1,15 @@
+.random-planet {
+    @apply flex justify-center mt-3 bg-green-400 w-fit p-3 rounded-lg mx-auto;
+
+    img {
+        @apply w-60 mr-3 rounded-lg;
+    }
+
+    ul {
+        @apply w-60;
+    }
+
+    h4 {
+        @apply text-lg font-semibold;
+    }
+}

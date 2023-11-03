@@ -1,0 +1,23 @@
+.header {
+    @apply p-3 flex justify-between text-xl items-center bg-red-400;
+
+    h3 {
+        @apply text-4xl inline shrink-0 font-medium;
+    }
+
+    a {
+        @apply align-bottom;
+    }
+
+    ul {
+        @apply grow max-w-lg flex justify-between mx-3;
+
+        li {
+            @apply inline;
+        }
+    }
+
+    button {
+        @apply shrink-0 bg-slate-700 p-3 rounded-lg;
+    }
+}
