@@ -8,7 +8,7 @@ interface IUseService {
 }
 
 const useService = create<IUseService>((set) => ({
-    service: new DummySwapiService(),
+    service: new SwapiService(),
     changeService: () => set((state) => ({
         service: state.service instanceof SwapiService ? new DummySwapiService() : new SwapiService()
     }))
