@@ -1,5 +1,5 @@
 .error-indicator {
-    @apply bg-yellow-300 text-center p-5 text-xl;
+    @apply bg-yellow-300 text-center p-5 text-xl w-full rounded-md;
 
     h4 {
         @apply text-2xl font-medium;
