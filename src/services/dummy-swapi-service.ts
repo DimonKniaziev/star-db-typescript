@@ -1,34 +1,7 @@
+import { IPerson, IPlanet, IStarship } from "../interfaces";
 import personImage from "./person-image.png";
 import planetImage from "./planet-image.png";
 import starshipImage from "./starship-image.png";
-
-interface IPerson {
-    id: number;
-    name: string;
-    gender: string;
-    birthYear: number;
-    eyeColor: string
-}
-
-interface IPlanet {
-    id: number;
-    name: string;
-    diameter: string | number;
-    population: number;
-    rotationPeriod: string
-}
-
-interface IStarship {
-    id: number;
-    name: string;
-    model: string;
-    manufacturer: string;
-    costInCredits: number;
-    length: number|string;
-    crew: number;
-    passengers: string
-}
-
 interface IDummySwapiService {
     people: IPerson[];
     planets: IPlanet[];
@@ -46,17 +19,17 @@ interface IDummySwapiService {
 
 class DummySwapiService implements IDummySwapiService {
     people = [
-        { id: 0, name: 'Arseniy [TEST DATA]', gender: 'male', birthYear: 2002, eyeColor: 'white' },
-        { id: 1, name: 'Dimon [TEST DATA]', gender: 'male', birthYear: 2002, eyeColor: 'dark brown' }
+        { id: 1, name: 'Arseniy [TEST DATA]', gender: 'male', birthYear: 2002, eyeColor: 'white' },
+        { id: 2, name: 'Dimon [TEST DATA]', gender: 'male', birthYear: 2002, eyeColor: 'dark brown' }
     ];
 
     planets = [
-        { id: 0, name: 'Mars [TEST DATA]', diameter: 'wery big diameter', population: 0, rotationPeriod: '10 days' },
-        { id: 1, name: 'Earth [TEST DATA]', diameter: 'wery big diameter', population: 100000000000000, rotationPeriod: '1 day' }
+        { id: 1, name: 'Mars [TEST DATA]', diameter: 'wery big diameter', population: 0, rotationPeriod: '10 days' },
+        { id: 2, name: 'Earth [TEST DATA]', diameter: 'wery big diameter', population: 100000000000000, rotationPeriod: '1 day' }
     ];
 
     starships = [
-        { id: 0,
+        { id: 1,
             name: 'Rocket [TEST DATA]',
             model: '1488',
             manufacturer: 'n/a',
@@ -72,7 +45,7 @@ class DummySwapiService implements IDummySwapiService {
     };
 
     getPerson = (id: number) => {
-        return this.people[id];
+        return this.people[id-1];
     };
 
     getAllPlanets = () => {
@@ -80,7 +53,7 @@ class DummySwapiService implements IDummySwapiService {
     };
 
     getPlanet = (id: number) => {
-        return this.planets[id];
+        return this.planets[id-1];
     };
 
     getAllStarships = () => {
@@ -88,7 +61,7 @@ class DummySwapiService implements IDummySwapiService {
     };
 
     getStarship = (id: number) => {
-        return this.starships[id];
+        return this.starships[id-1];
     };
 
     getPersonImage = () => {
