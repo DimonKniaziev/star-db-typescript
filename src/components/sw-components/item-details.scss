@@ -1,5 +1,7 @@
 .item-details {
-    @apply flex w-fit h-80 bg-blue-500 rounded-lg p-3;
+    @apply flex h-fit w-fit bg-blue-500 rounded-lg p-3;
+    height: 350px;
+    width: 480px;
 
     .image-container {
         @apply self-center;
@@ -9,7 +11,7 @@
     }
 
     h4 {
-        @apply text-lg font-semibold;
+        @apply text-lg font-semibold m-auto;
     }
 
     ul {
