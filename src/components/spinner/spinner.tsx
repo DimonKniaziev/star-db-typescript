@@ -1,8 +1,18 @@
 import React from "react";
+import "./spinner.css"
 
 const Spinner: React.FC = () => {
     return (
-        <h4>LOADING...</h4>
+        <div className="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     );
 }
 
