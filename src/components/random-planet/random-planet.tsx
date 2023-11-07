@@ -82,7 +82,7 @@ const RandomPlanet = () => {
     };
 
     const updatePlanet = async() => {
-        const id = service instanceof SwapiService ?  Math.floor(Math.random()*17 + 3) : Math.random() > 0.4 ? 1 : 0;        
+        const id = service instanceof SwapiService ?  Math.floor(Math.random()*17 + 3) : Math.random() > 0.4 ? 2 : 1;        
         try {
             const loadPlanet = await service.getPlanet(id);
             const loadImage = await service.getPlanetImage(id);
