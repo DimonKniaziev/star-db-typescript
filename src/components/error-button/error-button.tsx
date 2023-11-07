@@ -1,14 +1,24 @@
 import React, { useState } from "react";
+import "./error-button.scss"
 
-const ErrorButton = () => {
+interface IErrorButton {
+    onError: () => void;
+}
+
+const ErrorButton: React.FC<IErrorButton> = ({onError}) => {
     const [renderError, setRenderError] = useState(false);
     
     if(renderError) {
-        throw new Error("You throwed ERROR");
+        try {
+            throw new Error();
+        }
+        catch {
+            onError()
+        }
     }
 
     return (
-        <button onClick={() => setRenderError(true)}>
+        <button className="error-button" onClick={() => setRenderError(true)}>
             Throw Error
         </button>
     );

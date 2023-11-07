@@ -1,0 +1,6 @@
+.error-button {
+    @apply flex justify-center mt-3 bg-yellow-400 w-fit p-3 rounded-lg mx-auto font-bold font-sans;
+    &:hover {
+        @apply text-red-600;
+    }
+}
